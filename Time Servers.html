@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	  <title>NIST Internet Time Service</title>
+	  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	  
+	</head>
+	<body onload="setInterval('blinkIt()',300)">
+	
+<script type="text/javascript">
+function blinkIt() {
+ if (!document.all) return;
+ else {
+   for(i=0;i<document.all.tags('blink').length;i++){
+      s=document.all.tags('blink')[i];
+	  s.style.visibility=(s.style.visibility=='visible')?'hidden':'visible';
+   }
+ }
+}
+</script>
+     <table border="0" cellpadding="0" cellspacing="0" width="95%">
+<tr>
+     <td colspan="2">
+	     <hr noshade="" size="4">
+	 </td>
+</tr>
+<tr>
+     <td width="85%">
+	     <div align="left">
+		 <font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#555555"><b>NIST Internet Time Servers</b></font></div>
+	 </td>
+</tr>
+<tr>
+     <td colspan="2">
+	     <hr noshade="" size="4">
+	 </td>
+</tr>
+</table>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Date/Time</button>
+
+<p id="demo"></p>
+
+
+<p><strong>NOTICE: NIST has established a mailing lit (Google Group) to inform users of status changes 
+           of the Internet Time Service.<br>
+		   If you wish to subscribe to this list, please send your name and email address to:&nbsp; </strong></p>
+
+<p>The table below lists the time servers used by the NIST Internet Time
+   Service (ITS). The table lists each server's name, IP address, and location,
+   organized geographically within the US from North to South and then from East to West.
+   Please note that while we make every effort to ensure that the names of the 
+   servers are correct, we control the names of only the nist.gov servers. If
+   you have difficulty using the name of a system, you can access a server using
+   the IP address directly.</p>
+   
+   <strong>Important notes:<br><br></strong>
+   
+   1. We will continue to support the "TIME" protocol that uses tcp port 37 for the forseeable future.
+   However, this protocol is very expensive in terms of network bandwidth, since it uses the complete tcp
+   machinery to transmit only 32 bits of data. Users are *strongly* encouraged to upgrade to the network
+   time protocol (NTP), which is both more accurate and more robust.<br><br>
+   
+   2. Users of the NIST "DAYTIME" protocol on tcp port 13 are also strongly encouraged to upgrade to the
+   network time protocol, which provides greater accuracy and requires less network bandwidth.
+   The NIST time client (nistime-32bit.exe) supports both protocols.<br><br>
+   
+   3. The generic name time.nist.gov will continue to point to all of our servers on a round-robin basis,
+   and users are encouraged to access the service using this name.<br><br>
+   
+   <br>
+   
+   <p>The global address <i>time.nist.gov</i> is resolved to all of the server addresses below
+      in a round-robin sequence to equalize the load across all of the servers.
+	  <p>Whether you connect to a server using the name or the IP address, it is a
+	  bad practice to <i>&#8220;hard-code&#8221;</i> a particular server name or address into
+      a device so that these parameters cannot be changed bu the end user if that
+      becomes necessary at some future time.</p>
+      <p>All users should ensure that their software <b><i>NEVER</i></b> queries a server
+      more frequently than once every 4 seconds. Systems that exceed this rate will
+      be refused service. In extreme cases, systems that exceed this limit may be
+      considered as attempting a denial-of-service-attack.</p>
+
+<TABLE BORDER="4" CELLPADDING="5" CELLSPACING="0" width="98%" ALIGN="center" BGCOLOR="lightBlue">
+    <tr>
+       <td align = "center"><b>Name</b></td>	
+	   <td align = "center"><b>IP Address</b></td>
+	   <td align = "center"><b>Location</b></td>
+	   <td align = "center"><b>Status</b></td>
+	</tr>
+	
+<tr bgcolor="white">
+      <td align = "center">time-a-g.nist.gov
+</td>
+      <td align = "center">129.6.15.28
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+	  
+<tr bgcolor="lightBlue">
+      <td align = "center">time-b-g.nist.gov
+</td>
+      <td align = "center">129.6.15.29
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+	  
+<tr bgcolor="white">
+      <td align = "center">time-c-g.nist.gov
+</td>
+      <td align = "center">129.6.15.30
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"></td></tr>
+	  
+<tr bgcolor="lightBlue">
+      <td align = "center">time-d-g.nist.gov
+</td>
+      <td align = "center">129.6.15.27
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-d-g.nist.gov
+</td>
+      <td align = "center">2610:20:6f15:15::27
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-e-g.nist.gov
+</td>
+      <td align = "center">129.6.15.26
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-e-g.nist.gov
+</td>
+      <td align = "center">2610:20:6f15:15::26
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>	  
+	  
+<tr bgcolor="lightBlue">
+      <td align = "center">time-a-www.nist.gov
+</td>
+      <td align = "center">132.163.97.1
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+	  
+<tr bgcolor="white">
+      <td align = "center">time-b-www.nist.gov
+</td>
+      <td align = "center">132.163.97.2
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-c-www.nist.gov
+</td>
+      <td align = "center">132.163.97.3
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-d-www.nist.gov
+</td>
+      <td align = "center">132.163.97.4
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-d-www.nist.gov
+</td>
+      <td align = "center">2610:20:6f97:97::4
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services via IPv6</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-e-www.nist.gov
+</td>
+      <td align = "center">132.163.97.6
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-e-www.nist.gov
+</td>
+      <td align = "center">2610:20:6f97:97::6
+</td>
+      <td align = "center">WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>new server,services via IPV6</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-a-b.nist.gov
+</td>
+      <td align = "center">132.163.96.1
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>	
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-b-b.nist.gov
+</td>
+      <td align = "center">132.163.96.2
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-c-b.nist.gov
+</td>
+      <td align = "center">132.163.96.3
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-d-b.nist.gov
+</td>
+      <td align = "center">132.163.96.4
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-d-b.nist.gov
+</td>
+      <td align = "center">2610:20:6f96:96::4
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time-e-b.nist.gov
+</td>
+      <td align = "center">132.163.96.6
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">time-e-b.nist.gov
+</td>
+      <td align = "center">2610:20:6f96:96::6
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">time.nist.gov
+</td>
+      <td align = "center">global address for all servers
+</td>
+      <td align = "center">Multiple locations
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">utcnist.colorado.edu
+</td>
+      <td align = "center">128.138.140.44
+</td>
+      <td align = "center">University of Colorado,Boulder
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="lightBlue">
+      <td align = "center">utcnist2.colorado.edu
+</td>
+      <td align = "center">128.138.141.172
+</td>
+      <td align = "center">University of Colorado,Boulder
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>All Services Available</b></td></tr>
+
+<tr bgcolor="white">
+      <td align = "center">utcnist3.colorado.edu
+</td>
+      <td align = "center">128.138.140.211
+</td>
+      <td align = "center">University of Colorado,Boulder
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>NTP only, Recommended</b></td></tr>
+</table>
+<br>
+<p>The following servers support only authenticated NTP requests using the symmetric key encryption method that is defined in the NTP documentation.
+   They do not respond to requests for time in the <b><strong>DAYTIME</b></strong> or <b><strong>TIME</b></strong> formats and will not accept anonymous ftp connections.
+   You must apply to NIST for an encryption key to use these systems; they will not respond to NTP requests from users who have not registered with NIST.
+</p>
+
+<TABLE BORDER="4" CELLPADDING="5" CELLSPACING="0" width="98%" ALIGN="center" BGCOLOR="lightBlue">
+
+    <tr>
+      <td align = "center"><b>Name</b></td>
+      <td align = "center"><b>IP Address</b></td>
+      <td align = "center"><b>Location</b></td>
+      <td align = "center"><b>Status</b></td> 
+    </tr>
+
+<tr bgcolor="white">
+      <td align = "center">ntp-b.nist.gov
+</td>
+      <td align = "center">132.163.96.5
+</td>
+      <td align = "center">NIST, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>Authenticated Service</b></td></tr>
+	  
+<tr bgcolor="lightBlue">
+      <td align = "center">ntp-www.nist.gov
+</td>
+      <td align = "center">132.163.97.5
+</td>
+      <td align = "center">NIST WWV, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>Authenticated Service</b></td></tr>
+	  
+<tr bgcolor="white">
+      <td align = "center">ntp-c.colorado.edu
+</td>
+      <td align = "center">128.138.141.177
+</td>
+      <td align = "center">JILA, Colorado
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>Authenticated Service</b></td></tr>
+	  
+<tr bgcolor="lightBlue">
+      <td align = "center">ntp-d.nist.gov
+</td>
+      <td align = "center">129.6.15.32
+</td>
+      <td align = "center">NIST, Maryland
+</td>
+      <td align = "center" bgcolor="black" style="color: Red;"><b>Authenticated Service</b></td></tr>
+</table>
+
+<br>
+
+<p>The following server supports only the NTP format and transmits UT1 time rather than UTC(NIST). </p>
+
+<table border="0" cellpadding="3" cellspacing="3" frame="" width="90%">
+        <tr align="left" valign="top" bgcolor="lightBlue">
+            <td>ut1-time.colorado.edu</td>
+            <td>128.138.140.50</td>
+            <td>University of Colorado, Boulder</td>
+        </tr>
+        <tr align="left" valign="top" bgcolor="lightBlue">
+            <td>ut1-www.nist.gov</td>
+            <td>132.163.97.7</td>
+            <td>NIST WWV Radio, Ft. Collins, CO</td>
+        </tr>
+</table>
+
+</body>
+</html>		
+	  
